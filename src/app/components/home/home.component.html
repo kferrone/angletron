@@ -1,5 +1,8 @@
-<div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+<div id="main-container">
+  <app-header></app-header>
+  <div class="container">
+    {{dumbMessage}}
+    <ng-content></ng-content>
+  </div>
+  <app-footer></app-footer>
 </div>

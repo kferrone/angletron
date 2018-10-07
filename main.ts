@@ -1,6 +1,7 @@
 import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
+import installExtension, { ANGULARJS_BATARANG } from 'electron-devtools-installer';
 
 let win, serve;
 const args = process.argv.slice(1);
@@ -41,6 +42,11 @@ function createWindow() {
     // when you should delete the corresponding element.
     win = null;
   });
+
+  // installs the Angular JS browser extension for developer tools
+  installExtension(ANGULARJS_BATARANG)
+    .then((name) => console.log(`Added Extension:  ${name}`))
+    .catch((err) => console.log('An error occurred: ', err));
 
 }
 

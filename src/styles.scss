@@ -1,7 +1,15 @@
+@import "styles-variables";
+
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
 /* You can add global styles to this file, and also import other style files */
 html, body {
   margin: 0;
   padding: 0;
-
+  color: #fffdd0;
   height: 100%;
 }
