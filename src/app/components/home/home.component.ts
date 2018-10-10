@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  dumbMessage: String = 'Wassup fellas?';
+  dumbMessage: String = 'Wassup fellas? I\'m found';
 
   constructor() { }
 

@@ -1,8 +1,17 @@
 <div id="main-container">
   <app-header></app-header>
+  <app-side-nav></app-side-nav>
   <div class="container">
     {{dumbMessage}}
     <ng-content></ng-content>
+    <section class="container">
+      <div class="row">
+        <mat-card class="col-md-6">Well Now</mat-card> <!-- we use mat-card instead of div -->
+        <mat-card class="col-md-6"><mat-checkbox class="float-right"></mat-checkbox></mat-card>
+        <mat-card class="col-md-6 d-block d-lg-none">3</mat-card> <!-- will be hidden on large screens -->
+        <mat-card class="col-md-6 d-block d-lg-none">4</mat-card>
+      </div>
+    </section>
   </div>
   <app-footer></app-footer>
 </div>

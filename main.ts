@@ -3,6 +3,11 @@ import * as path from 'path';
 import * as url from 'url';
 import installExtension, { ANGULARJS_BATARANG } from 'electron-devtools-installer';
 
+export const ANGULARJS_AUGURY = {
+  id: 'elgalmkoelokbchhkhacckoklkejnhcd',
+  electron: '>=1.2.1',
+};
+
 let win, serve;
 const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
@@ -44,7 +49,7 @@ function createWindow() {
   });
 
   // installs the Angular JS browser extension for developer tools
-  installExtension(ANGULARJS_BATARANG)
+  installExtension([ANGULARJS_BATARANG, ANGULARJS_AUGURY])
     .then((name) => console.log(`Added Extension:  ${name}`))
     .catch((err) => console.log('An error occurred: ', err));
 
@@ -73,6 +78,8 @@ try {
       createWindow();
     }
   });
+
+  app.setName('Angletron');
 
 } catch (e) {
   // Catch Error

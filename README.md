@@ -11,13 +11,15 @@
 
 # Introduction
 
-Bootstrap and package your project with Angular 6(+) and Electron (Typescript + SASS + Hot Reload) for creating Desktop applications.
+Bootstrap and package your project with Angular 6(+) and Electron (Typescript + SASS + Hot Reload) for creating Desktop applications. 
 
 Currently runs with:
 
+- NodeJS 10.11.0
 - Angular v6.1.2
 - Electron v2.0.7
 - Electron Builder v20.28.1
+- Typescript v2.9.2
 
 With this sample, you can :
 
@@ -25,12 +27,21 @@ With this sample, you can :
 - Run your app in a production environment
 - Package your app into an executable file for Linux, Windows & Mac
 
+## Thanks to the original projects
+
+ - [start-javascript/sb-admin-material](https://github.com/start-javascript/sb-admin-material) - forked from
+ - [maximegris/angular-electron](https://github.com/maximegris/angular-electron) - merged with
+
+## Learn More
+
+ - [Angular-cli documentation](https://github.com/angular/angular-cli)
+
 ## Getting Started
 
 Clone this repository locally :
 
 ``` bash
-git clone https://github.com/maximegris/angular-electron.git
+git clone https://github.com/kferrone/angletron
 ```
 
 Install dependencies with npm :
@@ -42,8 +53,10 @@ npm install
 There is an issue with `yarn` and `node_modules` that are only used in electron on the backend when the application is built by the packager. Please use `npm` as dependencies manager.
 
 
-If you want to generate Angular components with Angular-cli , you **MUST** install `@angular/cli` in npm global context.  
-Please follow [Angular-cli documentation](https://github.com/angular/angular-cli) if you had installed a previous version of `angular-cli`.
+If you want to generate Angular components with Angular-cli . . . `npm run ng g components/someComponent`
+
+or globally with 
+
 
 ``` bash
 npm install -g @angular/cli
@@ -51,7 +64,7 @@ npm install -g @angular/cli
 
 ## To build for development
 
-- **in a terminal window** -> npm start  
+- **in a terminal window** -> `npm start`  
 
 Voila! You can use your Angular + Electron app in a local development environment with hot reload !
 
